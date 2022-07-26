@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/feautures",
         glue="com/cydeo/library/step_definitions",
-        dryRun = true,
-        tags="@all_accounts"
+        dryRun =true,
+        tags="@B26G32-108"
 )
 
 public class CukesRunner {

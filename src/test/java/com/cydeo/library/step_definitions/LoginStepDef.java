@@ -94,6 +94,7 @@ public class LoginStepDef {
     }
     @Then("account holder name should be {string}")
     public void account_holder_name_should_be(String expectedUserName) {
+        BrowserUtils.waitForVisibility(landingPage.userNameLink,15);
     String actualUserName=landingPage.userNameLink.getText();
     Assert.assertEquals("UserNameText verification Failed",expectedUserName,actualUserName);
     }
