@@ -18,6 +18,12 @@ public class LoginPage {
     @FindBy(xpath = "//button")
     public WebElement signInButton;
 
+    public void login(String username, String password) throws InterruptedException {
+        emailInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        signInButton.click();
+    }
+
     public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }

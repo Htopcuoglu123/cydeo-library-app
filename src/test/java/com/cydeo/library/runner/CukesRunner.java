@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/feautures",
         glue="com/cydeo/library/step_definitions",
-        dryRun =true,
+        dryRun =false,
         tags="@B26G32-108"
 )
 

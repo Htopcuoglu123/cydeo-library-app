@@ -9,19 +9,20 @@ public class UsersModulePage extends BasePage{
     public UsersModulePage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-    @FindBy(partialLinkText =" Add User")
-    WebElement addUserBtn;
 
-    @FindBy(name = "full_name")
-    WebElement fullNameBox;
+    @FindBy(xpath = "//a[@class='btn btn-lg btn-outline btn-primary btn-sm']")
+    public WebElement addNewUser;
 
-    @FindBy(name = "password")
-    WebElement passwordBox;
+    @FindBy(xpath = "//input[@name='full_name']")
+    public  WebElement fullNameBox;
 
-    @FindBy(xpath = "//input[@placeholder='Email']")
-    WebElement emailBox;
+    @FindBy(xpath = "//input[@name='password']")
+    public WebElement passwordBox;
+
+    @FindBy(xpath = "//input[@name='email']")
+    public WebElement emailBox;
 
     @FindBy(xpath = "//button[@type='submit']")
-    WebElement saveChangesBtn;
+    public WebElement saveChangesBtn;
 
 }
