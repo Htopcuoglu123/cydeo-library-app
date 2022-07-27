@@ -35,13 +35,13 @@ BasePage basePage=new BasePage();
     }
     @When("librarian enters full name,password, email address")
     public void librarian_enters_full_name_password_email_address() throws InterruptedException {
-    usersModulePage.fullNameBox.sendKeys("James Bond"+ Keys.ENTER);
+    usersModulePage.fullNameBox.sendKeys("James Bond");
    // BrowserUtils.waitForClickablility(By.xpath("//input[@type='password']"),10);
         Thread.sleep(3000);
-    usersModulePage.passwordBox.sendKeys("JB123"+Keys.ENTER);
+    usersModulePage.passwordBox.sendKeys("JB123");
    // BrowserUtils.waitForClickablility(By.xpath("//input[@placeholder='Email']"),10);
         Thread.sleep(3000);
-    usersModulePage.emailBox.sendKeys("JBond@gmail.com"+Keys.ENTER);
+    usersModulePage.emailBox.sendKeys("JBond@gmail.com");
    // BrowserUtils.waitForClickablility(By.xpath("//button[@type='submit']"),10);
     Thread.sleep(3000);
     usersModulePage.saveChangesBtn.click();
