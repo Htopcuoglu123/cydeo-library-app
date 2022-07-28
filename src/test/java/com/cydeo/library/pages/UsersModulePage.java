@@ -16,7 +16,7 @@ public class UsersModulePage extends BasePage{
     @FindBy(xpath = "//input[@name='full_name']")
     public  WebElement fullNameBox;
 
-    @FindBy(xpath = "//input[@name='password']")
+    @FindBy(css = "[name='password']")
     public WebElement passwordBox;
 
     @FindBy(xpath = "//input[@name='email']")

@@ -34,21 +34,22 @@ BasePage basePage=new BasePage();
 
     }
     @When("librarian enters full name,password, email address")
-    public void librarian_enters_full_name_password_email_address() throws InterruptedException {
+    public void librarian_enters_full_name_password_email_address() {
+
     usersModulePage.fullNameBox.sendKeys("James Bond");
-   // BrowserUtils.waitForClickablility(By.xpath("//input[@type='password']"),10);
-        Thread.sleep(3000);
+    BrowserUtils.waitForClickablility(By.cssSelector("[name='password']") ,30);
+
     usersModulePage.passwordBox.sendKeys("JB123");
-   // BrowserUtils.waitForClickablility(By.xpath("//input[@placeholder='Email']"),10);
-        Thread.sleep(3000);
+    BrowserUtils.waitForClickablility(By.xpath("//input[@name='email']"),30);
+
     usersModulePage.emailBox.sendKeys("JBond@gmail.com");
-   // BrowserUtils.waitForClickablility(By.xpath("//button[@type='submit']"),10);
-    Thread.sleep(3000);
-    usersModulePage.saveChangesBtn.click();
+
+
     }
     @When("librarian clicks save changes")
     public void librarian_clicks_save_changes() {
-
+        BrowserUtils.waitForClickablility(By.xpath("//button[@type='submit']"),30);
+        usersModulePage.saveChangesBtn.click();
     }
     @Then("verify a new user is created")
     public void verify_a_new_user_is_created() {
